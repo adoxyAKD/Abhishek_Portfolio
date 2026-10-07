@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek Kumar — Resume | Flutter & Android Developer</title>
+<meta name="description" content="Abhishek Kumar — Android & Flutter Developer resume. 4.5+ years Android, 2.3+ years Flutter. Experience, skills, projects, education & certifications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B121B;
+    --bg-elev: #101A26;
+    --surface: #14202E;
+    --surface-line: #223244;
+    --ink: #E9EEF4;
+    --ink-dim: #8FA1B5;
+    --ink-faint: #57687C;
+    --flutter: #13B9FD;
+    --dart: #3D8FE0;
+    --amber: #FFB454;
+    --green: #57D89C;
+    --radius: 14px;
+    --header-bg: rgba(11,18,27,0.72);
+    --shadow-med: rgba(5,10,18,0.3);
+    color-scheme: dark;
+  }
+  :root[data-theme="light"]{
+    --bg: #F4F6F9;
+    --bg-elev: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-line: #DEE4EC;
+    --ink: #101826;
+    --ink-dim: #4C5C70;
+    --ink-faint: #8092A6;
+    --header-bg: rgba(244,246,249,0.78);
+    --shadow-med: rgba(20,30,45,0.1);
+    --flutter: #0A7EA8;
+    --dart: #2C5FB0;
+    --amber: #B4650F;
+    --green: #128A54;
+    color-scheme: light;
+  }
+  html{ transition: background-color .35s ease; }
+  body, header, section, footer{ transition: background-color .35s ease, border-color .35s ease, color .35s ease, box-shadow .35s ease; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; max-width:100%; overflow-x:hidden; }
+  body{
+    background:var(--bg); color:var(--ink); font-family:'Inter', sans-serif;
+    line-height:1.6; max-width:100%; overflow-x:hidden;
+  }
+  ::selection{ background:var(--flutter); color:#04121C; }
+  a{ color:inherit; text-decoration:none; }
+  h1,h2,h3,h4{ font-family:'Space Grotesk', sans-serif; letter-spacing:-0.02em; }
+  .mono{ font-family:'JetBrains Mono', monospace; }
+  .wrap{ max-width:980px; margin:0 auto; padding:0 32px; }
+  @media (max-width:640px){ .wrap{ padding:0 20px; } }
+
+  body::before{
+    content:""; position:fixed; inset:0;
+    background-image:
+      linear-gradient(var(--surface-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--surface-line) 1px, transparent 1px);
+    background-size:64px 64px; opacity:0.06; pointer-events:none; z-index:0;
+  }
+  .ambient-layer{ position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+  .ambient-orb{ position:absolute; border-radius:50%; filter:blur(90px); opacity:0.14; }
+  .ambient-orb.o1{ width:480px; height:480px; top:-8%; right:-8%; background:radial-gradient(circle, var(--flutter), transparent 70%); }
+  .ambient-orb.o2{ width:420px; height:420px; bottom:-6%; left:-8%; background:radial-gradient(circle, var(--dart), transparent 70%); }
+
+  /* ---------- PAGE TRANSITIONS ---------- */
+  body{ animation:pageEnter .5s cubic-bezier(.16,.84,.44,1) both; }
+  @keyframes pageEnter{ from{ opacity:0; transform:scale(.985) translateY(10px); filter:blur(4px); } to{ opacity:1; transform:none; filter:blur(0); } }
+  body.page-exit{ animation:pageExitOut .38s cubic-bezier(.4,0,.2,1) forwards; }
+  @keyframes pageExitOut{ to{ opacity:0; transform:scale(.985) translateY(-8px); filter:blur(4px); } }
+  @media (prefers-reduced-motion: reduce){ body{ animation:none; } body.page-exit{ animation:none; } }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:50; backdrop-filter:blur(14px);
+    background:var(--header-bg); border-bottom:1px solid var(--surface-line);
+  }
+  nav{ display:flex; align-items:center; justify-content:space-between; padding:16px 32px; max-width:980px; margin:0 auto; gap:14px; }
+  @media (max-width:640px){ nav{ padding:14px 20px; } }
+  .logo{ font-weight:700; font-size:16px; display:flex; align-items:center; gap:8px; white-space:nowrap; }
+  .logo .dot{ width:9px; height:9px; border-radius:50%; background:var(--flutter); box-shadow:0 0 12px var(--flutter); }
+  .nav-actions{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:7px; padding:10px 16px; border-radius:10px;
+    font-size:13.5px; font-weight:600; border:none; cursor:pointer; white-space:nowrap;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .2s ease, background .2s ease, color .2s ease;
+  }
+  .btn-primary{ background:var(--flutter); color:#052032; box-shadow:0 8px 24px rgba(19,185,253,0.25); }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 12px 28px rgba(19,185,253,0.35); }
+  .btn-ghost{ border:1px solid var(--surface-line); color:var(--ink); background:transparent; }
+  .btn-ghost:hover{ border-color:var(--flutter); color:var(--flutter); transform:translateY(-2px); }
+
+  .theme-toggle{
+    width:38px; height:38px; border-radius:10px; flex-shrink:0;
+    border:1px solid var(--surface-line); background:var(--surface); color:var(--ink);
+    display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:16px;
+    transition:border-color .2s ease, transform .2s ease, background .2s ease;
+  }
+  .theme-toggle:hover{ border-color:var(--flutter); transform:translateY(-2px); }
+
+  /* ---------- HERO ---------- */
+  .r-hero{ position:relative; z-index:1; padding:56px 0 40px; }
+  .r-eyebrow{
+    display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono', monospace; font-size:12px;
+    color:var(--flutter); background:rgba(19,185,253,0.09); border:1px solid rgba(19,185,253,0.28);
+    padding:5px 12px; border-radius:100px; margin-bottom:18px;
+  }
+  .r-hero h1{ font-size:clamp(28px,4.4vw,42px); font-weight:700; line-height:1.15; }
+  .r-hero .role{ margin-top:10px; font-size:16.5px; color:var(--ink-dim); max-width:640px; }
+  .r-hero .role b{ color:var(--ink); font-weight:600; }
+
+  .contact-strip{ display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+  .contact-chip{
+    display:inline-flex; align-items:center; gap:7px; font-size:12.5px;
+    background:var(--surface); border:1px solid var(--surface-line); color:var(--ink-dim);
+    padding:7px 13px; border-radius:100px; transition:border-color .2s ease, color .2s ease, transform .2s ease;
+  }
+  .contact-chip:hover{ border-color:rgba(19,185,253,0.4); color:var(--flutter); transform:translateY(-1px); }
+
+  .hero-enter{ opacity:0; transform:translateY(18px); animation:heroIn .7s cubic-bezier(.16,.84,.44,1) forwards; animation-delay:var(--d,0s); }
+  @keyframes heroIn{ to{ opacity:1; transform:translateY(0); } }
+  @media (prefers-reduced-motion: reduce){ .hero-enter{ animation:none; opacity:1; transform:none; } }
+
+  /* ---------- SECTION SHELL ---------- */
+  .r-section{ position:relative; z-index:1; padding:34px 0; border-top:1px solid var(--surface-line); }
+  .r-section:first-of-type{ border-top:none; }
+  .r-section-head{ display:flex; align-items:baseline; gap:12px; margin-bottom:24px; }
+  .r-section-tag{ font-family:'JetBrains Mono'; font-size:11.5px; color:var(--flutter); letter-spacing:0.08em; text-transform:uppercase; }
+  .r-section-title{ font-size:clamp(20px,2.6vw,26px); font-weight:700; }
+
+  .reveal{ opacity:0; transform:translateY(20px); transition:opacity .6s cubic-bezier(.16,.84,.44,1), transform .6s cubic-bezier(.16,.84,.44,1); }
+  .reveal.visible{ opacity:1; transform:translateY(0); }
+
+  /* ---------- SHARED CARD MOTION (matches the portfolio's card treatment) ---------- */
+  @keyframes cardDrift{ 0%,100%{ top:0px; } 50%{ top:-6px; } }
+  @keyframes sweep{ 0%{ left:-40%; } 100%{ left:110%; } }
+
+  /* Summary */
+  .summary-card{
+    background:var(--surface); border:1px solid var(--surface-line); border-radius:var(--radius);
+    padding:24px 26px; font-size:15px; color:var(--ink-dim);
+    position:relative; overflow:hidden;
+    transition:border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+    transform-style:preserve-3d; will-change:transform;
+  }
+  .summary-card::before{
+    content:""; position:absolute; inset:0; border-radius:var(--radius);
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(19,185,253,0.1), transparent 60%);
+    opacity:0; transition:opacity .35s ease; pointer-events:none;
+  }
+  .summary-card:hover::before{ opacity:1; }
+  .summary-card::after{
+    content:""; position:absolute; top:0; left:-30%; width:30%; height:2px;
+    background:linear-gradient(90deg, transparent, var(--flutter), transparent);
+    animation:sweep 7s ease-in-out infinite;
+  }
+  .summary-card:hover{ border-color:rgba(19,185,253,0.35); box-shadow:0 18px 36px var(--shadow-med); }
+  .summary-card b{ color:var(--ink); font-weight:600; }
+
+  /* Skills */
+  .skills-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  @media (max-width:680px){ .skills-grid{ grid-template-columns:1fr; } }
+  .skill-block{
+    background:var(--bg-elev); border:1px solid var(--surface-line); border-radius:var(--radius); padding:18px 20px;
+    position:relative; overflow:hidden;
+    transition:border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+    animation:cardDrift 6s ease-in-out infinite;
+    transform-style:preserve-3d; will-change:transform;
+  }
+  .skill-block:nth-child(2n){ animation-delay:.6s; }
+  .skill-block:nth-child(3n){ animation-delay:1.2s; }
+  .skill-block::before{
+    content:""; position:absolute; inset:0; border-radius:var(--radius);
+    background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%), rgba(19,185,253,0.12), transparent 60%);
+    opacity:0; transition:opacity .3s ease; pointer-events:none;
+  }
+  .skill-block::after{
+    content:""; position:absolute; top:0; left:-40%; width:40%; height:2px;
+    background:linear-gradient(90deg, transparent, var(--flutter), transparent);
+    animation:sweep 7s ease-in-out infinite; animation-delay:.5s;
+  }
+  .skill-block:hover::before{ opacity:1; }
+  .skill-block:hover{ border-color:rgba(19,185,253,0.35); box-shadow:0 16px 32px var(--shadow-med); }
+  .skill-block h4{ font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--flutter); font-family:'JetBrains Mono'; font-weight:500; margin-bottom:12px; }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:7px; }
+  .chip{
+    font-size:12px; padding:5px 11px; border-radius:8px; background:var(--surface); border:1px solid var(--surface-line); color:var(--ink);
+    transition:border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+  }
+  .chip:hover{ border-color:rgba(19,185,253,0.45); background:rgba(19,185,253,0.08); color:var(--flutter); transform:translateY(-2px); }
+
+  /* Experience timeline */
+  .timeline{ display:flex; flex-direction:column; gap:26px; }
+  .r-role-card{
+    background:var(--bg-elev); border:1px solid var(--surface-line); border-radius:var(--radius); padding:22px 24px;
+    position:relative;
+    transition:border-color .3s ease, box-shadow .3s ease;
+  }
+  .r-role-card::before{
+    content:""; position:absolute; inset:0; border-radius:var(--radius);
+    background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%), rgba(19,185,253,0.07), transparent 60%);
+    opacity:0; transition:opacity .4s ease; pointer-events:none;
+  }
+  .r-role-card:hover::before{ opacity:1; }
+  .r-role-card:hover{ border-color:rgba(19,185,253,0.3); box-shadow:0 16px 36px var(--shadow-med); }
+  .r-role-top{ display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; margin-bottom:4px; }
+  .r-role-title{ font-size:16.5px; font-weight:600; font-family:'Space Grotesk'; }
+  .r-role-org{ color:var(--ink-dim); font-size:13.5px; margin-top:2px; }
+  .r-role-date{ font-family:'JetBrains Mono'; font-size:11.5px; color:var(--ink-faint); white-space:nowrap; padding-top:3px; }
+  .r-role-notes{ margin-top:10px; display:flex; flex-direction:column; gap:6px; }
+  .r-role-notes li{ list-style:none; display:flex; gap:9px; font-size:13.5px; color:var(--ink-dim); }
+  .r-role-notes li::before{ content:"+"; color:var(--flutter); font-family:'JetBrains Mono'; font-weight:600; flex-shrink:0; }
+
+  .sub-app{
+    margin-top:16px; padding:16px 18px; border-radius:10px; background:var(--surface); border:1px solid var(--surface-line);
+    position:relative; overflow:hidden;
+    transition:transform .3s ease, border-color .25s ease, box-shadow .25s ease;
+    animation:cardDrift 6.5s ease-in-out infinite;
+    transform-style:preserve-3d; will-change:transform;
+  }
+  .sub-app:nth-of-type(2n){ animation-delay:.8s; }
+  .sub-app:nth-of-type(3n){ animation-delay:1.6s; }
+  .sub-app::before{
+    content:""; position:absolute; inset:0; border-radius:10px;
+    background:radial-gradient(200px circle at var(--mx,50%) var(--my,50%), rgba(19,185,253,0.12), transparent 60%);
+    opacity:0; transition:opacity .3s ease; pointer-events:none;
+  }
+  .sub-app::after{
+    content:""; position:absolute; top:0; left:-40%; width:40%; height:2px;
+    background:linear-gradient(90deg, transparent, var(--flutter), transparent);
+    animation:sweep 6.5s ease-in-out infinite; animation-delay:.4s;
+  }
+  .sub-app:hover::before{ opacity:1; }
+  .sub-app:hover{ border-color:rgba(19,185,253,0.35); box-shadow:0 14px 28px var(--shadow-med); }
+  .sub-app-title{ font-size:13.5px; font-weight:600; color:var(--ink); font-family:'Space Grotesk'; }
+  .sub-app-meta{ font-size:11px; color:var(--ink-faint); font-family:'JetBrains Mono'; margin-top:2px; }
+  .sub-app-notes{ margin-top:9px; display:flex; flex-direction:column; gap:6px; }
+  .sub-app-notes li{ list-style:none; display:flex; gap:9px; font-size:12.8px; color:var(--ink-dim); }
+  .sub-app-notes li::before{ content:"+"; color:var(--flutter); font-family:'JetBrains Mono'; font-weight:600; flex-shrink:0; }
+  .sub-app-stack{ display:flex; gap:6px; flex-wrap:wrap; margin-top:12px; }
+  .stack-chip{
+    font-family:'JetBrains Mono'; font-size:10.5px; padding:4px 9px; border-radius:6px; background:var(--bg-elev); border:1px solid var(--surface-line); color:var(--ink-dim);
+    transition:border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+  }
+  .stack-chip:hover{ border-color:rgba(19,185,253,0.4); background:rgba(19,185,253,0.08); color:var(--flutter); transform:translateY(-1px); }
+
+  /* Projects */
+  .r-projects-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+  @media (max-width:680px){ .r-projects-grid{ grid-template-columns:1fr; } }
+  .r-proj-card{
+    background:var(--bg-elev); border:1px solid var(--surface-line); border-radius:var(--radius); padding:18px 20px;
+    position:relative; overflow:hidden;
+    transition:border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+    animation:cardDrift 6s ease-in-out infinite;
+    transform-style:preserve-3d; will-change:transform;
+  }
+  .r-proj-card:nth-child(2n){ animation-delay:.7s; }
+  .r-proj-card:nth-child(3n){ animation-delay:1.4s; }
+  .r-proj-card::before{
+    content:""; position:absolute; inset:0; border-radius:var(--radius);
+    background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%), rgba(19,185,253,0.14), transparent 60%);
+    opacity:0; transition:opacity .3s ease; pointer-events:none;
+  }
+  .r-proj-card::after{
+    content:""; position:absolute; top:0; left:-40%; width:40%; height:2px;
+    background:linear-gradient(90deg, transparent, var(--flutter), transparent);
+    animation:sweep 6s ease-in-out infinite;
+  }
+  .r-proj-card:nth-child(2n)::after{ animation-delay:1s; }
+  .r-proj-card:nth-child(3n)::after{ animation-delay:2s; }
+  .r-proj-card:hover::before{ opacity:1; }
+  .r-proj-card:hover{ border-color:rgba(19,185,253,0.4); box-shadow:0 20px 40px var(--shadow-med); }
+  .r-proj-name{ font-family:'Space Grotesk'; font-weight:600; font-size:15px; }
+  .r-proj-metric{ font-family:'JetBrains Mono'; font-size:10.5px; color:var(--amber); margin-top:2px; }
+  .r-proj-desc{ font-size:12.8px; color:var(--ink-dim); margin-top:8px; }
+
+  /* Education / certs */
+  .edu-cert-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media (max-width:680px){ .edu-cert-grid{ grid-template-columns:1fr; } }
+  .edu-card{
+    background:var(--bg-elev); border:1px solid var(--surface-line); border-radius:var(--radius); padding:20px 22px;
+    position:relative; overflow:hidden;
+    transition:border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+    transform-style:preserve-3d; will-change:transform;
+  }
+  .edu-card::before{
+    content:""; position:absolute; inset:0; border-radius:var(--radius);
+    background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%), rgba(19,185,253,0.1), transparent 60%);
+    opacity:0; transition:opacity .35s ease; pointer-events:none;
+  }
+  .edu-card:hover::before{ opacity:1; }
+  .edu-card:hover{ border-color:rgba(19,185,253,0.35); box-shadow:0 18px 36px var(--shadow-med); transform:translateY(-4px); }
+  .edu-card h4{ font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--flutter); font-family:'JetBrains Mono'; font-weight:500; margin-bottom:12px; }
+  .edu-item .deg{ font-weight:600; font-family:'Space Grotesk'; font-size:14.5px; }
+  .edu-item .school{ color:var(--ink-dim); font-size:13px; margin-top:3px; }
+  .edu-item .meta{ display:flex; justify-content:space-between; margin-top:6px; font-family:'JetBrains Mono'; font-size:11px; color:var(--ink-faint); }
+  .mini-list{ display:flex; flex-direction:column; gap:9px; }
+  .mini-list li{ list-style:none; font-size:13px; color:var(--ink-dim); display:flex; gap:9px; }
+  .mini-list li::before{ content:"★"; color:var(--amber); font-size:10.5px; }
+
+
+  /* Store links (Google Play / App Store) */
+  .store-link{
+    color:var(--flutter); font-weight:600; text-decoration:none;
+    border-bottom:1px solid rgba(19,185,253,0.45); padding-bottom:1px;
+    position:relative; z-index:2;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .store-link:hover, .store-link:focus-visible{ color:var(--amber); border-bottom-color:var(--amber); outline:none; }
+  .cert-link{ margin-left:4px; font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:500; white-space:nowrap; }
+  .r-proj-links{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; position:relative; z-index:2; }
+  .r-proj-links .store-link{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:500; border:1px solid var(--surface-line);
+    padding:4px 10px; border-radius:100px; background:var(--surface);
+  }
+  .r-proj-links .store-link:hover, .r-proj-links .store-link:focus-visible{ border-color:var(--amber); }
+
+  .lang-row{ display:flex; gap:10px; margin-top:6px; flex-wrap:wrap; }
+
+  /* Footer */
+  .r-footer{ padding:36px 0 56px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  .r-footer .build-info{ font-family:'JetBrains Mono'; font-size:11px; color:var(--ink-faint); }
+  .r-footer-actions{ display:flex; gap:10px; flex-wrap:wrap; }
+
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important; transition:none !important; } }
+  /* phone mockup */
+  .phone{
+    width:216px; height:442px;
+    background:linear-gradient(160deg, #16222F, #0D1620);
+    border:1px solid var(--surface-line);
+    box-shadow: 0 30px 80px var(--shadow-soft), 0 0 0 1px rgba(255,255,255,0.02) inset;
+    padding:13px; position:relative;
+    animation: float 6s ease-in-out infinite;
+  }
+  .phone-slot.slot-android .phone{ animation-delay:.4s; }
+  @keyframes float{ 0%,100%{ transform:translateY(0px);} 50%{ transform:translateY(-14px);} }
+
+  /* Android hardware: squarer corners, cool graphite frame, punch-hole cam, right-side buttons */
+  .phone-slot.slot-android .phone{
+    border-radius:26px;
+    background:linear-gradient(155deg, #17293C, #0A131F);
+    border:1px solid #2A4258;
+  }
+  .phone-slot.slot-android .phone-screen{ border-radius:15px; }
+  .phone-screen{
+    width:100%; height:100%; overflow:hidden;
+    background:var(--bg-elev); border:1px solid var(--surface-line);
+    padding:14px; display:flex; flex-direction:column; gap:9px;
+    position:relative;
+  }
+  .phone-cam{ width:10px; height:10px; background:#050A10; border-radius:50%; margin:0 auto 8px; border:2px solid #1B2733; position:relative; z-index:2; }
+  .phone-cam::after{ content:""; position:absolute; inset:2px; border-radius:50%; background:radial-gradient(circle at 35% 35%, #2A4356, #050A10); }
+  .hw-btn{ position:absolute; background:linear-gradient(90deg, #1B2733, #0F1720); border:1px solid #2A3946; }
+  .slot-android .hw-btn{ right:-3px; border-radius:0 3px 3px 0; }
+  .android-vol{ top:96px; width:3px; height:58px; }
+  .android-power{ top:166px; width:3px; height:34px; }
+
+  /* iPhone hardware: larger rounded corners, titanium frame, dynamic island, left+right buttons */
+  .phone-slot.slot-ios .phone{
+    border-radius:46px;
+    background:linear-gradient(155deg, #223A52, #0C1826);
+    border:1px solid #35597A;
+  }
+  .phone-slot.slot-ios .phone-screen{ border-radius:34px; }
+  .phone-island{ width:72px; height:20px; background:#050505; border-radius:12px; margin:0 auto 8px; border:1px solid rgba(255,255,255,0.05); position:relative; z-index:2; }
+  .phone-island::after{ content:""; position:absolute; right:10px; top:50%; transform:translateY(-50%); width:6px; height:6px; border-radius:50%; background:radial-gradient(circle at 35% 35%, #2E4A5E, #050505); }
+  .slot-ios .hw-btn{ border-radius:3px; }
+  .ios-mute{ left:-3px; top:88px; width:3px; height:16px; border-radius:3px 0 0 3px; }
+  .ios-vol-up{ left:-3px; top:118px; width:3px; height:32px; border-radius:3px 0 0 3px; }
+  .ios-vol-down{ left:-3px; top:156px; width:3px; height:32px; border-radius:3px 0 0 3px; }
+  .ios-power{ right:-3px; top:120px; width:3px; height:48px; border-radius:0 3px 3px 0; }
+  .home-indicator{ position:absolute; bottom:8px; left:50%; transform:translateX(-50%); width:44%; height:4px; border-radius:3px; background:rgba(233,238,244,0.55); z-index:2; }
+  .android-gesture{ position:absolute; bottom:7px; left:50%; transform:translateX(-50%); width:34%; height:3px; border-radius:3px; background:rgba(87,216,156,0.55); z-index:2; }
+
+  /* fake status bar */
+  .status-bar{ display:flex; align-items:center; justify-content:space-between; font-family:'JetBrains Mono'; font-size:9.5px; color:var(--ink-dim); padding-bottom:2px; }
+  .sb-signal{ display:flex; align-items:flex-end; gap:1.5px; height:7px; }
+  .sb-signal i{ display:block; width:2.5px; background:var(--ink-dim); border-radius:1px; }
+  .sb-signal i:nth-child(1){ height:3px; } .sb-signal i:nth-child(2){ height:4.5px; }
+  .sb-signal i:nth-child(3){ height:6px; } .sb-signal i:nth-child(4){ height:7px; }
+  .sb-icons{ display:flex; align-items:center; gap:4px; }
+  .sb-wifi{ width:11px; height:8px; position:relative; }
+  .sb-wifi i{ position:absolute; left:50%; bottom:0; border:1.4px solid var(--ink-dim); border-bottom:none; border-radius:50% 50% 0 0; transform:translateX(-50%); }
+  .sb-wifi i:nth-child(1){ width:11px; height:5.5px; opacity:.45; }
+  .sb-wifi i:nth-child(2){ width:7px; height:3.5px; opacity:.75; }
+  .sb-wifi i:nth-child(3){ width:3px; height:1.5px; opacity:1; background:var(--ink-dim); border:none; border-radius:50%; }
+  .sb-battery{ width:17px; height:8px; border:1.3px solid var(--ink-dim); border-radius:2.5px; position:relative; display:flex; align-items:center; padding:1.3px; }
+  .sb-battery::after{ content:""; position:absolute; right:-3px; top:2px; width:1.6px; height:3.6px; background:var(--ink-dim); border-radius:0 1px 1px 0; }
+  .sb-battery i{ display:block; height:100%; width:78%; background:var(--ink-dim); border-radius:0.8px; }
+  .slot-ios .sb-battery i{ background:var(--green); }
+  .slot-android .status-bar{ color:#9FB0C2; }
+  .phone-badge{
+    position:absolute; bottom:-14px; left:50%; transform:translateX(-50%);
+    font-family:'JetBrains Mono'; font-size:10px; padding:4px 12px; border-radius:100px;
+    background:var(--bg); border:1px solid var(--surface-line); white-space:nowrap; z-index:3;
+    display:flex; align-items:center; gap:5px;
+  }
+  .phone-badge.badge-android{ color:var(--green); border-color:rgba(87,216,156,0.3); }
+  .phone-badge.badge-ios{ color:var(--flutter); border-color:rgba(19,185,253,0.3); }
+  .ps-header{ display:flex; justify-content:space-between; align-items:center; }
+  .ps-title{ font-family:'JetBrains Mono'; font-size:10.5px; color:var(--ink-faint); }
+  .ps-status{ display:flex; align-items:center; gap:6px; font-family:'JetBrains Mono'; font-size:9.5px; color:var(--green); }
+  .ps-status i{ width:6px; height:6px; border-radius:50%; background:var(--green); display:inline-block; }
+  .ps-status.ios-status{ color:var(--flutter); }
+  .ps-status.ios-status i{ background:var(--flutter); }
+  .ps-card{
+    background:var(--surface); border:1px solid var(--surface-line); border-radius:12px; padding:11px;
+  }
+  .ps-bar{ height:6px; background:var(--surface-line); border-radius:4px; overflow:hidden; margin-top:8px;}
+  .ps-bar i{ display:block; height:100%; background:linear-gradient(90deg, var(--flutter), var(--dart)); }
+  .ps-bar.bar-android i{ background:linear-gradient(90deg, var(--green), #2FAE7A); }
+  .ps-tags{ display:flex; gap:6px; flex-wrap:wrap; margin-top:10px; }
+  .ps-tag{ font-family:'JetBrains Mono'; font-size:9px; padding:3px 7px; border-radius:100px; background:rgba(19,185,253,0.1); color:var(--flutter); border:1px solid rgba(19,185,253,0.25); }
+  .ps-tag.tag-android{ background:rgba(87,216,156,0.1); color:var(--green); border-color:rgba(87,216,156,0.28); }
+  .ps-list-item{ display:flex; align-items:center; gap:8px; font-size:10.5px; color:var(--ink-dim); }
+  .ps-list-item .dot{ width:5px; height:5px; border-radius:50%; background:var(--amber); }
+
+
+  /* =====================================================================
+     HERO VISUAL — photo card + Android & iOS phones (shared design)
+     ===================================================================== */
+  :root{ --hv-shadow:rgba(0,0,0,.55); --glass-a:rgba(255,255,255,.09); --glass-b:rgba(255,255,255,.015); --glass-line:rgba(255,255,255,.14); --halo-op:.55; --blob-op:1; }
+  :root[data-theme="light"]{ --hv-shadow:rgba(20,30,45,.20); --glass-a:rgba(255,255,255,.75); --glass-b:rgba(255,255,255,.25); --glass-line:rgba(20,30,45,.09); --halo-op:.38; --blob-op:.55; }
+
+  .hero-visual{ position:relative; z-index:1; display:flex; justify-content:center; min-width:0; }
+  .hv-scale{ width:calc(580px * var(--hv-s,.86)); height:calc(600px * var(--hv-s,.86)); flex-shrink:0; }
+  .hv-stage{ position:relative; width:580px; height:600px; transform:scale(var(--hv-s,.86)); transform-origin:top left; }
+
+  /* ---- ambient background ---- */
+  .hv-bg{ position:absolute; inset:0; z-index:0; pointer-events:none; }
+  .blob{ position:absolute; border-radius:50%; filter:blur(58px); opacity:calc(.5 * var(--blob-op)); will-change:transform; }
+  .blob.b1{ width:300px; height:300px; left:-50px; top:60px;  background:#13B9FD; animation:hvDrift1 14s ease-in-out infinite; }
+  .blob.b2{ width:280px; height:280px; right:-50px; top:300px; background:#57D89C; opacity:calc(.38 * var(--blob-op)); animation:hvDrift2 17s ease-in-out infinite; }
+  .blob.b3{ width:260px; height:260px; left:210px; top:-50px; background:#8B5CF6; opacity:calc(.34 * var(--blob-op)); animation:hvDrift3 19s ease-in-out infinite; }
+  .blob.b4{ width:320px; height:200px; left:130px; bottom:-30px; background:#3D8FE0; opacity:calc(.4 * var(--blob-op)); animation:hvDrift1 16s ease-in-out infinite reverse; }
+  @keyframes hvDrift1{ 0%,100%{ transform:translate(0,0) scale(1);} 50%{ transform:translate(36px,-28px) scale(1.14);} }
+  @keyframes hvDrift2{ 0%,100%{ transform:translate(0,0) scale(1);} 50%{ transform:translate(-40px,26px) scale(1.1);} }
+  @keyframes hvDrift3{ 0%,100%{ transform:translate(0,0) scale(1);} 50%{ transform:translate(-26px,36px) scale(1.18);} }
+
+  .hv-dots{
+    position:absolute; left:20px; top:24px; width:540px; height:540px; opacity:.5;
+    background-image:radial-gradient(var(--ink-faint) 1.1px, transparent 1.3px); background-size:26px 26px;
+    -webkit-mask-image:radial-gradient(circle at 50% 46%, #000 25%, transparent 68%); mask-image:radial-gradient(circle at 50% 46%, #000 25%, transparent 68%);
+    animation:hvDots 24s linear infinite;
+  }
+  @keyframes hvDots{ to{ background-position:26px 26px; } }
+
+  .slab{
+    position:absolute; border-radius:44px; border:1px solid var(--glass-line);
+    background:linear-gradient(145deg, var(--glass-a), var(--glass-b));
+    -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px);
+    box-shadow:0 30px 70px var(--hv-shadow);
+  }
+  .slab.s1{ left:88px; top:46px; width:410px; height:420px; transform:rotate(-7deg); animation:hvSway1 9s ease-in-out infinite; }
+  .slab.s2{ left:128px; top:78px; width:400px; height:410px; transform:rotate(6deg); opacity:.75;
+    background:linear-gradient(145deg, rgba(19,185,253,.16), rgba(139,92,246,.06) 60%, transparent); animation:hvSway2 11s ease-in-out infinite; }
+  @keyframes hvSway1{ 0%,100%{ transform:rotate(-7deg) translateY(0);} 50%{ transform:rotate(-5deg) translateY(-8px);} }
+  @keyframes hvSway2{ 0%,100%{ transform:rotate(6deg) translateY(0);} 50%{ transform:rotate(8deg) translateY(8px);} }
+
+  .hv-orbit{ position:absolute; left:50%; top:46%; width:520px; height:520px; margin:-260px 0 0 -260px; border-radius:50%; border:1px dashed var(--surface-line); opacity:.75; animation:hvSpin 40s linear infinite; }
+  .hv-orbit i{ position:absolute; top:-5px; left:50%; width:10px; height:10px; margin-left:-5px; border-radius:50%; background:var(--flutter); box-shadow:0 0 16px 3px var(--flutter); }
+  @keyframes hvSpin{ to{ transform:rotate(360deg); } }
+
+  /* ---- parallax depth layers (mouse-driven) ---- */
+  .depth{ position:absolute; inset:0; z-index:2; pointer-events:none; transition:transform .35s ease-out; will-change:transform; }
+  .depth > *{ pointer-events:auto; }
+  .d-photo{ z-index:3; transform:translate3d(calc(var(--px,0) * 7px), calc(var(--py,0) * 7px), 0); }
+  .d-android{ z-index:2; transform:translate3d(calc(var(--px,0) * -14px), calc(var(--py,0) * -10px), 0); }
+  .d-ios{ z-index:4; transform:translate3d(calc(var(--px,0) * 18px), calc(var(--py,0) * 12px), 0); }
+  .d-chips{ z-index:5; transform:translate3d(calc(var(--px,0) * 26px), calc(var(--py,0) * 20px), 0); }
+
+  /* ---- photo: blurred halo + animated card frame ---- */
+  .photo-slot{ position:absolute; left:125px; top:14px; width:330px; }
+  .photo-halo{
+    position:absolute; inset:-34px; border-radius:60px; z-index:0; pointer-events:none;
+    background:url(profile-original.jpg) center/cover no-repeat;
+    filter:blur(42px) saturate(1.5); opacity:var(--halo-op);
+    animation:hvBreath 6s ease-in-out infinite;
+  }
+  @keyframes hvBreath{ 0%,100%{ transform:scale(1); opacity:var(--halo-op);} 50%{ transform:scale(1.08); opacity:calc(var(--halo-op) + .18);} }
+  .photo-frame{
+    position:relative; z-index:1; border-radius:26px; padding:2px; overflow:hidden; background:var(--surface-line);
+    box-shadow:0 34px 70px var(--hv-shadow); transition:transform .3s ease, box-shadow .25s ease;
+    transform-style:preserve-3d; will-change:transform; animation:hvDrift 6s ease-in-out infinite;
+  }
+  @keyframes hvDrift{ 0%,100%{ top:0; } 50%{ top:-9px; } }
+  .photo-frame::before{
+    content:""; position:absolute; inset:-60%; z-index:0;
+    background:conic-gradient(from 0deg, transparent 0 50%, var(--flutter) 66%, var(--green) 80%, #8B5CF6 90%, transparent 96%);
+    animation:hvSpin 7s linear infinite;
+  }
+  .photo-frame:hover{ box-shadow:0 34px 80px var(--hv-shadow), 0 0 46px rgba(19,185,253,.28); }
+  .photo-card{ position:relative; z-index:1; border-radius:24px; overflow:hidden; background:var(--surface); padding:8px; }
+  .photo-card img{ display:block; width:100%; height:auto; aspect-ratio:1/1; border-radius:17px; }
+  .photo-card::before{
+    content:""; position:absolute; inset:0; z-index:2; border-radius:24px; pointer-events:none; opacity:0; transition:opacity .3s ease;
+    background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%), rgba(19,185,253,.20), transparent 60%);
+  }
+  .photo-frame:hover .photo-card::before{ opacity:1; }
+  .photo-card::after{
+    content:""; position:absolute; top:0; left:-40%; width:40%; height:2px; z-index:3;
+    background:linear-gradient(90deg, transparent, var(--flutter), transparent); animation:hvSweep 6s ease-in-out infinite;
+  }
+  @keyframes hvSweep{ 0%{ left:-40%; } 50%{ left:100%; } 100%{ left:100%; } }
+
+  /* ---- phones: placed separately, each with its own depth, glow and float ---- */
+  .hv-stage .phone-slot{ position:absolute; width:216px; height:442px; }
+  .hv-stage .slot-android{ left:-40px; top:206px; transform:rotate(-9deg) scale(.62); transform-origin:center; }
+  .hv-stage .slot-ios{ left:404px; top:200px; transform:rotate(8deg) scale(.72); transform-origin:center; }
+  .hv-stage .slot-android .phone{ animation:hvFloatA 6.5s ease-in-out infinite; box-shadow:0 30px 60px var(--hv-shadow), 0 0 50px rgba(87,216,156,.20); }
+  .hv-stage .slot-ios .phone{ animation:hvFloatI 5.5s ease-in-out infinite; box-shadow:0 30px 60px var(--hv-shadow), 0 0 50px rgba(19,185,253,.24); }
+  @keyframes hvFloatA{ 0%,100%{ transform:translateY(0) rotate(0);} 50%{ transform:translateY(-16px) rotate(1.5deg);} }
+  @keyframes hvFloatI{ 0%,100%{ transform:translateY(0) rotate(0);} 50%{ transform:translateY(-20px) rotate(-1.5deg);} }
+  .phone-shadow{ position:absolute; height:26px; border-radius:50%; background:var(--hv-shadow); filter:blur(14px); animation:hvShadow 6s ease-in-out infinite; }
+  .phone-shadow.ps-a{ left:14px; top:526px; width:120px; }
+  .phone-shadow.ps-i{ left:444px; top:548px; width:130px; animation-delay:-.6s; }
+  @keyframes hvShadow{ 0%,100%{ transform:scale(1); opacity:.8;} 50%{ transform:scale(.82); opacity:.45;} }
+  .hv-stage .phone-badge{ bottom:-22px; font-size:12px; }
+  /* live screens */
+  .hv-stage .ps-bar i{ transform-origin:left center; animation:hvBar 3.6s ease-in-out infinite alternate; }
+  .hv-stage .slot-ios .ps-bar i{ animation-delay:-1.2s; }
+  @keyframes hvBar{ from{ transform:scaleX(.42);} to{ transform:scaleX(1);} }
+  .hv-stage .ps-status i{ animation:hvBlink 1.8s ease-in-out infinite; }
+  @keyframes hvBlink{ 50%{ opacity:.25; } }
+
+  /* ---- floating chips ---- */
+  .hv-chip{
+    position:absolute; display:flex; align-items:center; gap:7px; white-space:nowrap;
+    font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink);
+    background:var(--header-bg); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+    border:1px solid var(--surface-line); border-radius:100px; padding:7px 13px; box-shadow:0 12px 30px var(--hv-shadow);
+    animation:hvChip 5s ease-in-out infinite;
+  }
+  .hv-chip .mono{ color:var(--flutter); }
+  .hv-chip .dot{ width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 10px var(--green); }
+  .hv-chip.chip-a{ top:0; right:26px; }
+  .hv-chip.chip-b{ top:150px; left:6px; animation-delay:-1.6s; }
+  .hv-chip.chip-c{ top:452px; left:196px; animation-delay:-3s; }
+  @keyframes hvChip{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-9px);} }
+
+  @media (prefers-reduced-motion: reduce){
+    .blob,.hv-dots,.slab,.hv-orbit,.photo-halo,.photo-frame,.photo-frame::before,.photo-card::after,
+    .hv-stage .phone,.phone-shadow,.hv-stage .ps-bar i,.hv-stage .ps-status i,.hv-chip{ animation:none !important; }
+    .depth{ transform:none !important; transition:none; }
+  }
+
+  .r-hero{ --hv-s:.74; }
+  .r-hero-top{ display:flex; align-items:center; justify-content:space-between; gap:24px; }
+  .r-hero-text{ min-width:0; flex:1; }
+  @media (max-width:760px){
+    .r-hero{ --hv-s:.8; }
+    .r-hero-top{ flex-direction:column-reverse; align-items:center; gap:18px; }
+  }
+  @media (max-width:600px){ .r-hero{ --hv-s:.58; } }
+  @media (max-width:380px){ .r-hero{ --hv-s:.5; } }
+
+/* ===== PERF: smooth scrolling ===== */
+@keyframes pageEnter{from{opacity:0}to{opacity:1}}
+@keyframes pageExitOut{to{opacity:0}}
+@keyframes heroIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+body{animation:pageEnter .4s ease backwards}
+.hero-enter{filter:none!important}
+.reveal,.about-text p{filter:none!important}
+header{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.slab,.hv-chip{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.about-orb,.ambient-orb{filter:none!important}
+.blob{filter:none!important;background-image:radial-gradient(circle,currentColor,transparent 68%)!important;background-color:transparent!important}
+.blob.b1{color:#13B9FD}.blob.b2{color:#57D89C}.blob.b3{color:#8B5CF6}.blob.b4{color:#3D8FE0}
+.project-card,.about-stat,.edu-card,.release,.sub-app,.resume-panel,.form-card,.skill-block,.r-proj-card,.summary-card,.r-role-card{will-change:auto!important;transform-style:flat!important}
+.off *,.off *::before,.off *::after{animation-play-state:paused!important}
+.as-border{background:none!important;animation:none!important;overflow:hidden}
+.as-border::before,.rp-ring::before{content:"";position:absolute;left:50%;top:50%;width:220%;aspect-ratio:1;margin:0;background:conic-gradient(transparent 0 55%,var(--flutter),var(--green),transparent);animation:ringSpin 4s linear infinite;transform:translate(-50%,-50%)}
+@keyframes ringSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes sheen{to{transform:translateX(420%) skewX(-18deg)}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes qIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes scanX{from{transform:translateX(-100%)}to{transform:translateX(0)}}
+@keyframes chipGlow{0%,70%,100%{transform:none;box-shadow:none}80%{transform:translateY(-3px);box-shadow:0 6px 16px color-mix(in srgb,var(--flutter) 35%,transparent)}}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
+
+.quote-sec{position:relative;padding:72px 0 56px;text-align:center;overflow:hidden}
+.q-card{position:relative;max-width:820px;margin:0 auto;padding:44px 32px 34px;border-radius:24px;border:1px solid var(--surface-line);background:linear-gradient(160deg,color-mix(in srgb,var(--flutter) 9%,transparent),transparent 60%),var(--surface);overflow:hidden}
+.q-mark{position:absolute;top:-10px;left:22px;font:700 120px/1 'Space Grotesk',serif;color:var(--flutter);opacity:.18;animation:floatY 5s ease-in-out infinite}
+.q-text{position:relative;font:600 clamp(20px,3vw,30px)/1.4 'Space Grotesk',sans-serif;min-height:3.9em;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 .3em}
+.q-text span{display:inline-block;opacity:0;animation:qIn .6s cubic-bezier(.16,.84,.44,1) forwards;animation-delay:calc(var(--i)*.045s)}
+.q-text span.hl{background:linear-gradient(90deg,var(--flutter),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.q-by{margin-top:14px;font:500 12px 'JetBrains Mono',monospace;color:var(--ink-faint);letter-spacing:.06em}
+.q-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
+.q-dots i{width:22px;height:4px;border-radius:4px;background:var(--surface-line);overflow:hidden;position:relative}
+.q-dots i.on::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--flutter),var(--green));transform-origin:left;animation:qBar 6.5s linear forwards}
+@keyframes qBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+
+/* ===== HEADER WIPE (right → left) ===== */
+.r-section-tag,.r-section-title{position:relative;overflow:hidden;display:inline-block;padding:2px 8px 3px 0}
+.r-section-tag::before,.r-section-title::before{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(90deg,var(--green),var(--flutter));transform:translateX(-101%)}
+.r-section-tag::after{content:"";position:absolute;right:0;top:0;bottom:0;width:40%;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent,color-mix(in srgb,var(--flutter) 34%,transparent),transparent);transform:translateX(130%)}
+.reveal.visible .r-section-tag::before,.reveal.visible .r-section-title::before{animation:wipeL .8s cubic-bezier(.76,0,.24,1) .15s both}
+.reveal.visible .r-section-tag::after{animation:sweepL 6.5s ease-in-out 2s infinite}
+@keyframes wipeL{from{transform:translateX(0)}to{transform:translateX(-101%)}}
+@keyframes sweepL{0%{transform:translateX(130%)}30%,100%{transform:translateX(-330%)}}
+@media (prefers-reduced-motion:reduce){.r-section-tag::before,.r-section-title::before,.r-section-tag::after{display:none}}
+.r-section{padding:44px 0!important}
+
+/* ===== WIPE: left → right ===== */
+@keyframes wipeL{from{transform:translateX(0)}to{transform:translateX(101%)}}
+@keyframes sweepL{0%{transform:translateX(-130%)}30%,100%{transform:translateX(330%)}}
+.section-title::after,.r-section-tag::after{right:auto!important;left:0!important;transform:translateX(-130%)}
+.section-title::before,.section-tag::before,.r-section-tag::before,.r-section-title::before{transform:translateX(101%)}
+.section-title::before,.section-tag::before,.r-section-tag::before,.r-section-title::before{background:linear-gradient(270deg,var(--green),var(--flutter))}
+
+html,body{overflow-x:clip!important}
+header{position:sticky!important;top:0!important;z-index:100!important;background:color-mix(in srgb,var(--bg) 93%,transparent)!important}
+</style>
+</head>
+<body>
+<script>
+  (function(){
+    try{
+      var stored = sessionStorage.getItem('theme');
+      var theme = stored || 'dark';
+      if(theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    }catch(e){}
+  })();
+</script>
+
+<div class="ambient-layer">
+  <div class="ambient-orb o1"></div>
+  <div class="ambient-orb o2"></div>
+</div>
+
+<header>
+  <nav>
+    <a href="index.html" class="logo" id="logoBackLink"><span class="dot"></span>Abhishek<span class="mono" style="color:var(--ink-faint);font-weight:400;">.dart</span></a>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" title="Toggle dark / light mode">🌙</button>
+      <a href="index.html" class="btn btn-ghost" id="backToPortfolio">← Back to Portfolio</a>
+      <a href="Abhishek_Kumar_Resume.pdf" download="Abhishek_Kumar_Resume.pdf" class="btn btn-primary">⬇ Download PDF</a>
+    </div>
+  </nav>
+</header>
+
+<div class="wrap r-hero">
+  <div class="r-hero-top">
+  <div class="r-hero-text">
+  <div class="r-eyebrow hero-enter" style="--d:0s"><span class="mono">RESUME</span></div>
+  <h1 class="hero-enter" style="--d:.08s">Abhishek Kumar</h1>
+  <p class="role hero-enter" style="--d:.16s">
+    <b>Android Developer | Flutter Developer | Native &amp; Cross-Platform Mobile Developer</b><br>
+    4.5+ years of Android experience and 2.3+ years of Flutter experience, building production mobile apps across social media, fintech, enterprise, service-booking, and mobility domains.
+  </p>
+  </div>
+  <div class="hero-visual hero-enter" style="--d:.35s">
+    <div class="hv-scale">
+    <div class="hv-stage" id="hvStage">
+
+      <!-- ambient background: blurred aurora, glass slabs, dots, orbit -->
+      <div class="hv-bg" aria-hidden="true">
+        <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span>
+        <span class="hv-dots"></span>
+        <span class="slab s1"></span><span class="slab s2"></span>
+        <span class="hv-orbit"><i></i></span>
+      </div>
+
+      <!-- photo -->
+      <div class="depth d-photo">
+        <div class="photo-slot">
+          <div class="photo-halo" aria-hidden="true"></div>
+          <div class="photo-frame">
+            <div class="photo-card">
+              <img src="profile-original.jpg" alt="Abhishek Kumar — Android &amp; Flutter Developer" width="1254" height="1254" fetchpriority="high">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Android phone -->
+      <div class="depth d-android">
+        <div class="phone-shadow ps-a"></div>
+      <div class="phone-slot slot-android">
+        <div class="phone">
+          <span class="hw-btn android-vol"></span>
+          <span class="hw-btn android-power"></span>
+          <div class="phone-cam"></div>
+          <div class="phone-screen">
+            <div class="status-bar">
+              <span>9:41</span>
+              <div class="sb-icons">
+                <div class="sb-signal"><i></i><i></i><i></i><i></i></div>
+                <div class="sb-wifi"><i></i><i></i><i></i></div>
+                <div class="sb-battery"><i></i></div>
+              </div>
+            </div>
+            <div class="ps-header">
+              <span class="ps-title">MainActivity.kt</span>
+              <span class="ps-status"><i></i>LIVE</span>
+            </div>
+            <div class="ps-card">
+              <span class="ps-title">Play Store Release</span>
+              <div class="ps-bar bar-android"><i style="width:100%;"></i></div>
+              <div class="ps-tags">
+                <span class="ps-tag tag-android">Kotlin</span>
+                <span class="ps-tag tag-android">Coroutines</span>
+                <span class="ps-tag tag-android">MVVM</span>
+              </div>
+            </div>
+            <div class="ps-card" style="flex:1; display:flex; flex-direction:column; gap:9px; justify-content:center;">
+              <div class="ps-list-item"><span class="dot" style="background:var(--green);"></span>HappyTask — Play Store ✓</div>
+              <div class="ps-list-item"><span class="dot" style="background:var(--green);"></span>Appzillon — Banking ✓</div>
+              <div class="ps-list-item"><span class="dot"></span>ClubDunes — Live ✓</div>
+            </div>
+            <div class="ps-card">
+              <span class="ps-title">./gradlew assembleRelease</span>
+              <div class="ps-tags" style="margin-top:6px;"><span class="ps-tag tag-android" style="color:var(--green);border-color:rgba(87,216,156,0.3);background:rgba(87,216,156,0.08);">✓ build succeeded</span></div>
+            </div>
+            <span class="android-gesture"></span>
+          </div>
+        </div>
+        <div class="phone-badge badge-android">🤖 Android</div>
+      </div>
+
+      </div>
+
+      <!-- iOS phone -->
+      <div class="depth d-ios">
+        <div class="phone-shadow ps-i"></div>
+      <div class="phone-slot slot-ios">
+        <div class="phone">
+          <span class="hw-btn ios-mute"></span>
+          <span class="hw-btn ios-vol-up"></span>
+          <span class="hw-btn ios-vol-down"></span>
+          <span class="hw-btn ios-power"></span>
+          <div class="phone-island"></div>
+          <div class="phone-screen">
+            <div class="status-bar">
+              <span>9:41</span>
+              <div class="sb-icons">
+                <div class="sb-signal"><i></i><i></i><i></i><i></i></div>
+                <div class="sb-wifi"><i></i><i></i><i></i></div>
+                <div class="sb-battery"><i></i></div>
+              </div>
+            </div>
+            <div class="ps-header">
+              <span class="ps-title">social_engine.dart</span>
+              <span class="ps-status ios-status"><i></i>LIVE</span>
+            </div>
+            <div class="ps-card">
+              <span class="ps-title">Migration Progress</span>
+              <div class="ps-bar"><i style="width:100%;"></i></div>
+              <div class="ps-tags">
+                <span class="ps-tag">Flutter</span>
+                <span class="ps-tag">Firebase</span>
+                <span class="ps-tag">Riverpod</span>
+              </div>
+            </div>
+            <div class="ps-card" style="flex:1; display:flex; flex-direction:column; gap:9px; justify-content:center;">
+              <div class="ps-list-item"><span class="dot" style="background:var(--flutter);"></span>iOS — App Store ✓</div>
+              <div class="ps-list-item"><span class="dot" style="background:var(--flutter);"></span>SocialEngine Chat — Live ✓</div>
+              <div class="ps-list-item"><span class="dot" style="background:var(--flutter);"></span>Widget tests — Mocktail ✓</div>
+            </div>
+            <div class="ps-card">
+              <span class="ps-title">flutter build ipa</span>
+              <div class="ps-tags" style="margin-top:6px;"><span class="ps-tag" style="color:var(--green);border-color:rgba(87,216,156,0.3);background:rgba(87,216,156,0.08);">✓ build succeeded</span></div>
+            </div>
+            <span class="home-indicator"></span>
+          </div>
+        </div>
+        <div class="phone-badge badge-ios">🍎 iOS</div>
+      </div>
+      </div>
+
+      <!-- floating chips -->
+      <div class="depth d-chips">
+        <div class="hv-chip chip-a"><span class="mono">&lt;/&gt;</span> Flutter &amp; Android</div>
+        <div class="hv-chip chip-b"><i class="dot"></i> MVVM</div>
+        <div class="hv-chip chip-c"><span class="mono">10+</span> apps shipped</div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  <div class="contact-strip hero-enter" style="--d:.24s">
+    <span class="contact-chip">📍 Gurgaon, India</span>
+    <a href="mailto:abhishek.kmr.akd@gmail.com" class="contact-chip">📧 abhishek.kmr.akd@gmail.com</a>
+    <a href="tel:+918933854370" class="contact-chip">📱 +91 8933854370</a>
+    <a href="https://www.linkedin.com/in/abhishekkumar1205/" target="_blank" rel="noopener" class="contact-chip">💼 LinkedIn</a>
+    <a href="https://github.com/adoxyAKD" target="_blank" rel="noopener" class="contact-chip">🐙 GitHub</a>
+    <a href="https://abhishekportfolio-psi-black.vercel.app/" target="_blank" rel="noopener" class="contact-chip">🌐 Portfolio</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- SUMMARY -->
+  <section class="r-section reveal">
+    <div class="r-section-head"><span class="r-section-tag">// Summary</span></div>
+    <div class="summary-card">
+      Android Developer with <b>4.5+ years of Android experience</b> and <b>2.3+ years of Flutter experience</b>, building production mobile apps across social media, fintech, enterprise, service-booking, and mobility domains. Strong in Kotlin, Java, Android SDK, Flutter, Dart, Jetpack, MVVM/Clean Architecture, Firebase, REST APIs, WebSockets, payments, Google Maps, deep linking, and automated testing. Owns features end-to-end from requirements through production release, including a native <b>Android-to-Flutter migration</b>, and has mentored 2 junior Android developers, contributing to <b>10+ published applications</b> across Google Play and the App Store.
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="r-section reveal">
+    <div class="r-section-head"><span class="r-section-tag">// Technical Skills</span></div>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <h4>Native Android</h4>
+        <div class="chip-row">
+          <span class="chip">Kotlin</span><span class="chip">Java</span><span class="chip">Android SDK</span>
+          <span class="chip">Jetpack Compose</span><span class="chip">ViewModel</span><span class="chip">LiveData</span>
+          <span class="chip">StateFlow/Flow</span><span class="chip">WorkManager</span><span class="chip">Room</span><span class="chip">Paging 3</span><span class="chip">DataStore</span><span class="chip">SQLite</span><span class="chip">Coroutines</span>
+          <span class="chip">XML/ViewBinding</span><span class="chip">Material 3</span><span class="chip">Background &amp; Foreground Services</span>
+          <span class="chip">WebView</span><span class="chip">CameraX</span><span class="chip">Camera2</span><span class="chip">ExoPlayer</span><span class="chip">Glide</span><span class="chip">Picasso</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Architecture</h4>
+        <div class="chip-row">
+          <span class="chip">MVVM</span><span class="chip">Clean Architecture</span><span class="chip">Repository Pattern</span>
+          <span class="chip">Dependency Injection (Hilt)</span><span class="chip">SOLID</span><span class="chip">OOP</span><span class="chip">Performance Optimization</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Backend / APIs</h4>
+        <div class="chip-row">
+          <span class="chip">REST APIs (Retrofit, OkHttp)</span><span class="chip">Firebase Auth</span><span class="chip">Firestore</span>
+          <span class="chip">Realtime Database</span><span class="chip">Analytics</span><span class="chip">WebSockets</span><span class="chip">FCM</span><span class="chip">Crashlytics</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Payments &amp; Testing</h4>
+        <div class="chip-row">
+          <span class="chip">Stripe</span><span class="chip">Google Play Billing (In-App Billing)</span>
+          <span class="chip">JUnit</span><span class="chip">Mockito</span><span class="chip">Espresso</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Flutter / Cross-Platform</h4>
+        <div class="chip-row">
+          <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Provider</span><span class="chip">Riverpod</span>
+          <span class="chip">BLoC</span><span class="chip">GetIt</span><span class="chip">Dio</span><span class="chip">Hive</span><span class="chip">SharedPreferences</span><span class="chip">Flutter Test</span><span class="chip">Widget Testing</span><span class="chip">Mocktail</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Integrations</h4>
+        <div class="chip-row">
+          <span class="chip">Push Notifications</span><span class="chip">Google/Facebook Login</span><span class="chip">Localization</span>
+          <span class="chip">AdMob</span><span class="chip">Google Maps SDK</span><span class="chip">Custom Chrome Tabs</span><span class="chip">Deep Linking</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Security</h4>
+        <div class="chip-row">
+          <span class="chip">JWT Authentication</span><span class="chip">SSL Pinning</span><span class="chip">Encrypted Storage</span><span class="chip">ProGuard/R8</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Methodologies</h4>
+        <div class="chip-row">
+          <span class="chip">Agile</span><span class="chip">Scrum</span><span class="chip">Sprint Planning</span><span class="chip">Cross-Functional Collaboration</span><span class="chip">Code Reviews</span><span class="chip">Release Management</span>
+        </div>
+      </div>
+      <div class="skill-block" style="grid-column:1 / -1;">
+        <h4>Tools &amp; Deployment</h4>
+        <div class="chip-row">
+          <span class="chip">Android Studio</span><span class="chip">Agile/Scrum</span><span class="chip">JIRA</span><span class="chip">Git</span>
+          <span class="chip">Postman</span><span class="chip">Gradle</span><span class="chip">App Signing</span><span class="chip">ProGuard/R8</span><span class="chip">Google Play Console</span><span class="chip">App Store Connect (iOS)</span>
+          <span class="chip">CI/CD (GitHub Actions)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="r-section reveal">
+    <div class="r-section-head"><span class="r-section-tag">// Professional Experience</span></div>
+    <div class="timeline">
+
+      <div class="r-role-card">
+        <div class="r-role-top">
+          <div>
+            <div class="r-role-title">Android Developer</div>
+            <div class="r-role-org">Ahead Websoft Technologies Pvt. Ltd. — Gurgaon, India</div>
+          </div>
+          <div class="r-role-date">Jul 2025 – Sep 2026</div>
+        </div>
+        <ul class="r-role-notes">
+          <li>Mentored and guided 2 junior developers on Android development.</li>
+        </ul>
+
+        <div class="sub-app">
+          <div class="sub-app-title">ClubDunes — Social Community App</div>
+          <div class="sub-app-meta">Android (Kotlin), REST APIs, Firebase, MVVM, Coroutines, ExoPlayer · <a class="store-link" href="https://play.google.com/store/apps/details?id=com.clubDunes" target="_blank" rel="noopener noreferrer" aria-label="ClubDunes on Google Play">Google Play</a></div>
+          <ul class="sub-app-notes">
+            <li>Built a Dubai-based social community app (Kotlin) with posts, comments, and member interactions driven by REST APIs, plus Firebase for Google Sign-In and FCM for push notifications. 100+ downloads, 5.0-star rating on Google Play.</li>
+            <li>Implemented the event booking module (event listings, join/RSVP flows, member profiles) using MVVM and Coroutines for a clean, maintainable codebase.</li>
+            <li>Optimized feed performance with Paging 3 pagination and Glide image caching for smooth scrolling.</li>
+            <li>Added deep linking, embedded WebView content, and Custom Chrome Tabs for Stripe payment flows.</li>
+          </ul>
+          <div class="sub-app-stack"><span class="stack-chip">Kotlin</span><span class="stack-chip">REST APIs</span><span class="stack-chip">Firebase</span><span class="stack-chip">MVVM</span><span class="stack-chip">Coroutines</span><span class="stack-chip">ExoPlayer</span><span class="stack-chip">Paging 3</span><span class="stack-chip">Glide</span></div>
+        </div>
+
+        <div class="sub-app">
+          <div class="sub-app-title">SocialEngine Mobile App [Flutter] — Social Networking Platform</div>
+          <div class="sub-app-meta">Flutter, Dart, REST APIs, Firebase, MVVM · <a class="store-link" href="https://play.google.com/store/apps/details?id=com.sesolutions" target="_blank" rel="noopener noreferrer" aria-label="SocialEngine Mobile App on Google Play">Google Play</a> | <a class="store-link" href="https://apps.apple.com/in/app/socialengine-native-app/id1269496435" target="_blank" rel="noopener noreferrer" aria-label="SocialEngine Mobile App on App Store">App Store</a></div>
+          <ul class="sub-app-notes">
+            <li>Independently led the Android (Kotlin) to Flutter migration end-to-end, rebuilding UI, navigation, and state management with full feature parity; shipped to Google Play and App Store. 1,000+ downloads, 4.3-star rating across 54 reviews.</li>
+            <li>Built a TikTok-style short-video (clips) feature in Flutter.</li>
+            <li>Integrated REST APIs for content sharing, activity feeds, and engagement modules, with Firebase for Google Sign-In and FCM push notifications; reduced regression risk with unit and widget testing (Flutter Test, Mocktail).</li>
+          </ul>
+          <div class="sub-app-stack"><span class="stack-chip">Flutter</span><span class="stack-chip">Dart</span><span class="stack-chip">Firebase</span><span class="stack-chip">MVVM</span></div>
+        </div>
+
+        <div class="sub-app">
+          <div class="sub-app-title">SocialEngine Chat [Flutter] — Social Media Messaging</div>
+          <div class="sub-app-meta">Flutter, Dart, Firebase, REST APIs, GetIt, MVVM · <a class="store-link" href="https://play.google.com/store/apps/details?id=secircuitchat.com" target="_blank" rel="noopener noreferrer" aria-label="SocialEngine Chat on Google Play">Google Play</a> | <a class="store-link" href="https://apps.apple.com/us/app/socialengine-chat/id6748292833" target="_blank" rel="noopener noreferrer" aria-label="SocialEngine Chat on App Store">App Store</a></div>
+          <ul class="sub-app-notes">
+            <li>Built a real-time chat app (MVVM) for 1:1 and group messaging across 5 content types, with upload/download progress, read receipts, typing indicators, and paginated history.</li>
+            <li>Applied GetIt dependency injection; integrated REST APIs, with Firebase for Google Sign-In and FCM push notifications, plus deep links opening the relevant chat and automatic login from the SocialEngine app.</li>
+          </ul>
+          <div class="sub-app-stack"><span class="stack-chip">Flutter</span><span class="stack-chip">GetIt</span><span class="stack-chip">Firebase</span><span class="stack-chip">REST APIs</span></div>
+        </div>
+      </div>
+
+      <div class="r-role-card">
+        <div class="r-role-top">
+          <div>
+            <div class="r-role-title">Android Developer</div>
+            <div class="r-role-org">I-Next Web Technologies Pvt. Ltd. — Chandigarh, India</div>
+          </div>
+          <div class="r-role-date">May 2024 – Jul 2025</div>
+        </div>
+
+        <div class="sub-app">
+          <div class="sub-app-title">HappyTask — Service Booking Platform</div>
+          <div class="sub-app-meta">Android (Kotlin), Jetpack Compose, WebSockets, REST APIs, Deep Linking · <a class="store-link" href="https://play.google.com/store/apps/details?id=com.ht.happytask" target="_blank" rel="noopener noreferrer" aria-label="HappyTask on Google Play">Google Play</a></div>
+          <ul class="sub-app-notes">
+            <li>Architected and shipped the app end-to-end across 15+ service categories; cut booking completion time by 40% by redesigning the booking UI flow and optimizing API pipelines.</li>
+            <li>Cut notification latency by 90% by replacing polling with a WebSocket-based push system, and added a deep-linking layer for third-party navigation into specific service screens.</li>
+          </ul>
+          <div class="sub-app-stack"><span class="stack-chip">Kotlin</span><span class="stack-chip">Jetpack Compose</span><span class="stack-chip">WebSockets</span></div>
+        </div>
+
+        <div class="sub-app">
+          <div class="sub-app-title">BaOui — Language Learning Platform</div>
+          <div class="sub-app-meta">Android (Kotlin), Firebase · <a class="store-link" href="https://play.google.com/store/apps/details?id=com.baoui.android" target="_blank" rel="noopener noreferrer" aria-label="BaOui on Google Play">Google Play</a></div>
+          <ul class="sub-app-notes">
+            <li>Grew the app to 1,000+ downloads across 30+ languages, shipping listening, reading, and review/recall practice modules.</li>
+            <li>Used Firebase for dynamic content delivery, enabling curriculum updates without a new app release.</li>
+          </ul>
+          <div class="sub-app-stack"><span class="stack-chip">Kotlin</span><span class="stack-chip">Firebase</span></div>
+        </div>
+
+        <div class="sub-app">
+          <div class="sub-app-title">GreenRide Africa [Flutter] — Ride-Hailing &amp; Mobility App</div>
+          <div class="sub-app-meta">Flutter, Dart, REST APIs, Google Maps · <a class="store-link" href="https://play.google.com/store/apps/details?id=com.greenrideafrica.app" target="_blank" rel="noopener noreferrer" aria-label="GreenRide Africa on Google Play">Google Play</a> | <a class="store-link" href="https://apps.apple.com/in/app/greenride-africa-go-green/id6743440417" target="_blank" rel="noopener noreferrer" aria-label="GreenRide Africa on App Store">App Store</a></div>
+          <ul class="sub-app-notes">
+            <li>Scaled a cross-platform ride-hailing app to 5,000+ downloads — pickup/destination selection, upfront fare estimation, live driver tracking, and Google Maps-based ETA monitoring.</li>
+            <li>Delivered REST API-driven auth, booking, pricing, trip management, and safety features, plus cash/mobile money payments (MTN, Airtel) and localization (English, French, Kinyarwanda).</li>
+          </ul>
+          <div class="sub-app-stack"><span class="stack-chip">Flutter</span><span class="stack-chip">Google Maps</span><span class="stack-chip">REST APIs</span></div>
+        </div>
+      </div>
+
+      <div class="r-role-card">
+        <div class="r-role-top">
+          <div>
+            <div class="r-role-title">Freelance Android &amp; Flutter Developer</div>
+          </div>
+          <div class="r-role-date">Feb 2024 – Apr 2024</div>
+        </div>
+        <ul class="r-role-notes">
+          <li>Delivered freelance Android and Flutter work across multiple client apps — bug fixes, feature improvements, and Play Store publishing/support.</li>
+        </ul>
+      </div>
+
+      <div class="r-role-card">
+        <div class="r-role-top">
+          <div>
+            <div class="r-role-title">Android Developer</div>
+            <div class="r-role-org">I-Exceed Technology Solutions Pvt. Ltd. — Bengaluru, India</div>
+          </div>
+          <div class="r-role-date">Feb 2022 – Jan 2024</div>
+        </div>
+
+        <div class="sub-app">
+          <div class="sub-app-title">Appzillon — Digital Banking / Low-Code Platform</div>
+          <div class="sub-app-meta">Android (Kotlin, Java), Appzillon Framework, Firebase, Espresso, JUnit</div>
+          <ul class="sub-app-notes">
+            <li>Implemented Android 14 compatibility updates for the Appzillon IDE (Camera and File Operation modules), and built Photo Picker, Barcode Scanning, Camera, and File Operations features using Java and Kotlin.</li>
+            <li>Integrated SIM Binding, SMS, and SIM information features for mobile network management, and developed Universal Deep Linking for navigation between applications.</li>
+            <li>Implemented Network, SMS, and GPS listeners for real-time updates and background operations.</li>
+            <li>Implemented push notifications, WebView, AdMob, theme switching, Google Maps SDK, and Custom Chrome Tabs across multiple application workflows.</li>
+            <li>Wrote automated tests with Espresso and JUnit, and delivered modules across Local, UAT, and Production environments in Agile sprints, from business requirements through deployment; resolved 30+ UAT and production defects.</li>
+          </ul>
+          <div class="sub-app-stack"><span class="stack-chip">Kotlin</span><span class="stack-chip">Java</span><span class="stack-chip">Appzillon Framework</span><span class="stack-chip">Espresso</span><span class="stack-chip">JUnit</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="r-section reveal">
+    <div class="r-section-head"><span class="r-section-tag">// Selected Projects</span></div>
+    <div class="r-projects-grid">
+      <div class="r-proj-card">
+        <div class="r-proj-name">SocialEngine Mobile</div>
+        <div class="r-proj-metric">1,000+ downloads · 4.3★</div>
+        <div class="r-proj-desc">Native-to-Flutter migration of a social networking app, live on Google Play &amp; App Store with full feature parity.</div>
+        <div class="r-proj-links"><a class="store-link" href="https://play.google.com/store/apps/details?id=com.sesolutions" target="_blank" rel="noopener noreferrer">Google Play</a><a class="store-link" href="https://apps.apple.com/in/app/socialengine-native-app/id1269496435" target="_blank" rel="noopener noreferrer">App Store</a></div>
+      </div>
+      <div class="r-proj-card">
+        <div class="r-proj-name">SocialEngine Chat</div>
+        <div class="r-proj-metric">Live · Google Play &amp; App Store</div>
+        <div class="r-proj-desc">Real-time 1:1 and group messaging app in Flutter with read receipts, typing indicators and paginated history.</div>
+        <div class="r-proj-links"><a class="store-link" href="https://play.google.com/store/apps/details?id=secircuitchat.com" target="_blank" rel="noopener noreferrer">Google Play</a><a class="store-link" href="https://apps.apple.com/us/app/socialengine-chat/id6748292833" target="_blank" rel="noopener noreferrer">App Store</a></div>
+      </div>
+      <div class="r-proj-card">
+        <div class="r-proj-name">GreenRide Africa</div>
+        <div class="r-proj-metric">5,000+ downloads</div>
+        <div class="r-proj-desc">Cross-platform ride-hailing app with live driver tracking, fare estimation, and multilingual support.</div>
+        <div class="r-proj-links"><a class="store-link" href="https://play.google.com/store/apps/details?id=com.greenrideafrica.app" target="_blank" rel="noopener noreferrer">Google Play</a><a class="store-link" href="https://apps.apple.com/in/app/greenride-africa-go-green/id6743440417" target="_blank" rel="noopener noreferrer">App Store</a></div>
+      </div>
+      <div class="r-proj-card">
+        <div class="r-proj-name">HappyTask</div>
+        <div class="r-proj-metric">15+ service categories</div>
+        <div class="r-proj-desc">Service booking platform with a WebSocket notification layer and third-party deep-linking.</div>
+        <div class="r-proj-links"><a class="store-link" href="https://play.google.com/store/apps/details?id=com.ht.happytask" target="_blank" rel="noopener noreferrer">Google Play</a></div>
+      </div>
+      <div class="r-proj-card">
+        <div class="r-proj-name">BaOui</div>
+        <div class="r-proj-metric">1,000+ downloads</div>
+        <div class="r-proj-desc">Language-learning app across 30+ languages with Firebase-driven curriculum updates.</div>
+        <div class="r-proj-links"><a class="store-link" href="https://play.google.com/store/apps/details?id=com.baoui.android" target="_blank" rel="noopener noreferrer">Google Play</a></div>
+      </div>
+      <div class="r-proj-card">
+        <div class="r-proj-name">Appzillon</div>
+        <div class="r-proj-metric">Enterprise banking</div>
+        <div class="r-proj-desc">Digital banking / low-code platform delivered through Local, UAT and Production environments.</div>
+      </div>
+      <div class="r-proj-card">
+        <div class="r-proj-name">ClubDunes</div>
+        <div class="r-proj-metric">100+ downloads · 5.0★</div>
+        <div class="r-proj-desc">Dubai-based social community app with REST API-driven posts and event booking, Firebase Google Sign-In and FCM push notifications.</div>
+        <div class="r-proj-links"><a class="store-link" href="https://play.google.com/store/apps/details?id=com.clubDunes" target="_blank" rel="noopener noreferrer">Google Play</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & CERTIFICATIONS -->
+  <section class="r-section reveal">
+    <div class="r-section-head"><span class="r-section-tag">// Education &amp; Certifications</span></div>
+    <div class="edu-cert-grid">
+      <div class="edu-card">
+        <h4>Education</h4>
+        <div class="edu-item">
+          <div class="deg">B.Tech — Information Technology</div>
+          <div class="school">Ajay Kumar Garg Engineering College, Ghaziabad</div>
+          <div class="meta"><span>Aug 2017 – Sep 2021</span><span>70.63%</span></div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <h4>Certifications &amp; Achievements</h4>
+        <ul class="mini-list">
+          <li><span>Introduction to Flutter — Simplilearn <a class="store-link cert-link" href="https://simpli-web.app.link/e/sbmGY9e3Z5b" target="_blank" rel="noopener noreferrer" aria-label="View certificate: Introduction to Flutter, Simplilearn">View Certificate</a></span></li>
+          <li><span>Kotlin Masterclass 2023 — Udemy <a class="store-link cert-link" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-3a7d7efd-b673-40ef-85a9-416468222837.pdf" target="_blank" rel="noopener noreferrer" aria-label="View certificate: Kotlin Masterclass 2023, Udemy">View Certificate</a></span></li>
+          <li><span>Android Dev Masterclass (Java) — Udemy <a class="store-link cert-link" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-13495836-f706-49f5-8d1c-603492f92246.pdf" target="_blank" rel="noopener noreferrer" aria-label="View certificate: Android Dev Masterclass (Java), Udemy">View Certificate</a></span></li>
+          <li>5-Star Core Java — HackerRank</li>
+        </ul>
+      </div>
+    </div>
+    <div class="edu-card" style="margin-top:14px;">
+      <h4>Languages</h4>
+      <div class="lang-row">
+        <span class="chip">English</span><span class="chip">Hindi</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<section class="quote-sec"><div class="wrap"><div class="q-card"><div class="q-mark">“</div><div class="q-text" id="qText" aria-live="polite"></div><div class="q-by">— Abhishek Kumar · Flutter &amp; Android Developer</div><div class="q-dots" id="qDots"><i></i><i></i><i></i></div></div></div></section>
+<footer class="wrap r-footer">
+  <div class="build-info">© Abhishek Kumar · Resume last updated Sep 2026</div>
+  <div class="r-footer-actions">
+    <a href="index.html" class="btn btn-ghost" id="backToPortfolioFooter">← Back to Portfolio</a>
+    <a href="Abhishek_Kumar_Resume.pdf" download="Abhishek_Kumar_Resume.pdf" class="btn btn-primary">⬇ Download PDF</a>
+  </div>
+</footer>
+
+<script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Theme toggle — shares the same localStorage key as the portfolio page
+  (function(){
+    const root = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    if(!toggle) return;
+    function syncToggleUI(){
+      const isLight = root.getAttribute('data-theme') === 'light';
+      toggle.textContent = isLight ? '☀️' : '🌙';
+      toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    }
+    syncToggleUI();
+    toggle.addEventListener('click', () => {
+      const isLight = root.getAttribute('data-theme') === 'light';
+      if(isLight){ root.removeAttribute('data-theme'); try{ sessionStorage.setItem('theme','dark'); }catch(e){} }
+      else{ root.setAttribute('data-theme','light'); try{ sessionStorage.setItem('theme','light'); }catch(e){} }
+      syncToggleUI();
+    });
+  })();
+
+  // Smooth exit transition when navigating back to the portfolio
+  ['backToPortfolio', 'backToPortfolioFooter', 'logoBackLink'].forEach(id => {
+    const el = document.getElementById(id);
+    if(!el) return;
+    el.addEventListener('click', (e) => {
+      if (reduceMotion) return;
+      e.preventDefault();
+      const href = el.getAttribute('href');
+      document.body.classList.add('page-exit');
+      setTimeout(() => { window.location.href = href; }, 340);
+    });
+  });
+  // FIX: clear the exit fade when the page is restored via Back/Forward (bfcache), otherwise the screen stays black
+  window.addEventListener('pageshow', () => { document.body.classList.remove('page-exit'); });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) document.body.classList.remove('page-exit'); });
+
+  // Scroll-reveal for sections below the hero
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if(en.isIntersecting){ en.target.classList.add('visible'); io.unobserve(en.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Full 3D tilt + glow-follow for every card — identical treatment to the portfolio's project cards
+  document.querySelectorAll('.summary-card, .skill-block, .sub-app, .r-proj-card, .edu-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2, cy = rect.height / 2;
+      const rotateX = ((y - cy) / cy) * -5;
+      const rotateY = ((x - cx) / cx) * 5;
+      card.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      card.style.setProperty('--mx', `${(x / rect.width) * 100}%`);
+      card.style.setProperty('--my', `${(y / rect.height) * 100}%`);
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+
+  // Glow-follow only (no tilt) for the role-card containers — they hold nested sub-app cards,
+  // so only the sub-app cards themselves get the full tilt to avoid a "double wobble".
+  document.querySelectorAll('.r-role-card').forEach(block => {
+    block.addEventListener('mousemove', (e) => {
+      const rect = block.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      block.style.setProperty('--mx', `${(x / rect.width) * 100}%`);
+      block.style.setProperty('--my', `${(y / rect.height) * 100}%`);
+    });
+  });
+
+</script>
+
+<script>
+/* Hero visual: cursor-follow glow + 3D tilt on the photo card, and depth parallax for photo / phones / chips */
+(function(){
+  var stage = document.getElementById('hvStage'); if(!stage) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce || !(window.matchMedia && window.matchMedia('(pointer:fine)').matches)) return;
+  var zone = stage.closest('.hero, .r-hero') || document.body;
+  zone.addEventListener('mousemove', function(e){
+    var r = stage.getBoundingClientRect();
+    var nx = ((e.clientX - (r.left + r.width/2)) / (window.innerWidth/2));
+    var ny = ((e.clientY - (r.top + r.height/2)) / (window.innerHeight/2));
+    stage.style.setProperty('--px', Math.max(-1, Math.min(1, nx)).toFixed(3));
+    stage.style.setProperty('--py', Math.max(-1, Math.min(1, ny)).toFixed(3));
+  });
+  zone.addEventListener('mouseleave', function(){ stage.style.setProperty('--px', 0); stage.style.setProperty('--py', 0); });
+  var card = stage.querySelector('.photo-frame');
+  if(card){
+    card.addEventListener('mousemove', function(e){
+      var r = card.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      var rx = ((y - r.height/2) / (r.height/2)) * -5, ry = ((x - r.width/2) / (r.width/2)) * 5;
+      card.style.transform = 'perspective(700px) rotateX('+rx+'deg) rotateY('+ry+'deg) translateY(-4px)';
+      card.style.setProperty('--mx', (x / r.width * 100) + '%'); card.style.setProperty('--my', (y / r.height * 100) + '%');
+    });
+    card.addEventListener('mouseleave', function(){ card.style.transform = ''; });
+  }
+})();
+</script>
+<script>
+(function(){var Q=["I don't just write code that runs — I ship products people keep on their home screen.","Great apps feel effortless. That effortlessness is engineered, one clean architecture decision at a time.","Ship fast, keep it clean, make it scale — the only roadmap I trust."],HL=/ship|effortless|clean|keep|scale|products|engineered/i,t=document.getElementById('qText'),d=document.querySelectorAll('#qDots i'),n=0;if(!t)return;
+function show(){t.innerHTML=Q[n].split(' ').map(function(w,i){return '<span style="--i:'+i+'"'+(HL.test(w)?' class="hl"':'')+'>'+w+'</span>'}).join(' ');d.forEach(function(x,i){x.classList.remove('on');if(i===n){void x.offsetWidth;x.classList.add('on')}});n=(n+1)%Q.length}
+show();setInterval(function(){if(!document.hidden)show()},6500)})();
+/* perf: pause offscreen animations, rAF-throttled tilt */
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('off',!e.isIntersecting)})},{rootMargin:'150px'});document.querySelectorAll('section,.hero,footer').forEach(function(s){io.observe(s)});
+if(!matchMedia('(pointer:fine)').matches)return;document.querySelectorAll('.stat,.ec,.resume-panel').forEach(function(c){var raf=0,ev;c.addEventListener('mousemove',function(e){ev=e;if(raf)return;raf=requestAnimationFrame(function(){raf=0;var r=c.getBoundingClientRect(),x=ev.clientX-r.left,y=ev.clientY-r.top;c.style.transform='perspective(800px) rotateX('+((y/r.height-.5)*-5)+'deg) rotateY('+((x/r.width-.5)*5)+'deg) translateY(-3px)';c.style.setProperty('--mx',x/r.width*100+'%');c.style.setProperty('--my',y/r.height*100+'%')})});c.addEventListener('mouseleave',function(){c.style.transform=''})})})();
+</script>
+</body>
+</html>
